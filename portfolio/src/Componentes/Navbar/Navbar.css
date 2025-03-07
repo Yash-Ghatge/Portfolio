@@ -64,8 +64,9 @@
     }
     .nav-mob-open{
         display: block;
-        position: fixed;
-        right: 30px;
+        position: relative;
+        
+        
     }
     .nav-mob-close{
         display: block;
