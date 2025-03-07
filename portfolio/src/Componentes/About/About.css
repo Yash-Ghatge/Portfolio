@@ -1,0 +1,119 @@
+.about {
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.title h1 {
+    background: linear-gradient(270deg,#DF8908 10%,#B415FF 100%);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.title.show h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title img {
+    width: 180px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 0.5s;
+}
+
+.title.show img {
+    opacity: 1;
+}
+
+.sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    gap: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sections.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.left img {
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease-in-out 1s, transform 0.8s ease-in-out 1s;
+}
+
+.left.show img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.right {
+    max-width: 650px;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-in-out 1.2s, transform 1s ease-in-out 1.2s;
+}
+
+.right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.para p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.para p:hover {
+    transform: scale(1.02);
+    color: #ffdd57;
+}
+
+
+@media (max-width: 768px) {
+    .sections {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .left img {
+        width: 90%;
+    }
+
+    .right {
+        text-align: center;
+    }
+}

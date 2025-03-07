@@ -1,0 +1,105 @@
+.project-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  .project-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    background: linear-gradient(270deg,#DF8908 10%,#B415FF 100%);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+  
+ 
+  .project-card {
+    background: #222; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  
+  .project-card.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .project-card img {
+      height: 180px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card img {
+      height: 160px;
+    }
+  }
+  
+  .project-info {
+    padding: 20px;
+  }
+  
+  .project-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #fff; 
+  }
+  
+  .project-info p {
+    font-size: 1em;
+    color: #ccc; 
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  
+  .project-info a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background: #00aaff; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .project-info a:hover {
+    background: #0077cc; 
+  }
+  
+  

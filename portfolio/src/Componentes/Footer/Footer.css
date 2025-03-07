@@ -1,0 +1,44 @@
+
+.footer {
+   
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+
+.icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 48px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+
+.github:hover { color: #6e5494; }
+.linkedin:hover { color: #0077b5; }
+.whatsapp:hover { color: #25D366; }
+.gmail:hover { color: #D44638; }
+
+
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 15px;
+    }
+    .icon {
+        font-size: 24px;
+    }
+}
