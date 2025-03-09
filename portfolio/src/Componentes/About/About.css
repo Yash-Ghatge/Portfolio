@@ -5,7 +5,7 @@
     overflow: hidden;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .about.show {
@@ -20,8 +20,8 @@
 }
 
 .title h1 {
-    background: linear-gradient(270deg,#DF8908 10%,#B415FF 100%);
-    background-clip:text;
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3.5rem;
@@ -29,7 +29,7 @@
     margin-bottom: 20px;
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .title.show h1 {
@@ -40,7 +40,7 @@
 .title img {
     width: 180px;
     opacity: 0;
-    transition: opacity 1s ease-in-out 0.5s;
+    transition: opacity 0.8s ease-in-out 0.3s;
 }
 
 .title.show img {
@@ -55,7 +55,7 @@
     gap: 80px;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .sections.show {
@@ -69,7 +69,7 @@
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
     opacity: 0;
     transform: scale(0.8);
-    transition: opacity 0.8s ease-in-out 1s, transform 0.8s ease-in-out 1s;
+    transition: opacity 0.6s ease-in-out 0.5s, transform 0.6s ease-in-out 0.5s;
 }
 
 .left.show img {
@@ -82,7 +82,7 @@
     text-align: left;
     opacity: 0;
     transform: translateX(50px);
-    transition: opacity 1s ease-in-out 1.2s, transform 1s ease-in-out 1.2s;
+    transition: opacity 0.8s ease-in-out 0.6s, transform 0.8s ease-in-out 0.6s;
 }
 
 .right.show {
@@ -103,10 +103,35 @@
 }
 
 
+@media (max-width: 1024px) {
+    .sections {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .left img {
+        width: 75%;
+    }
+
+    .right {
+        text-align: center;
+        max-width: 80%;
+    }
+
+    .title h1 {
+        font-size: 2.8rem;
+    }
+
+    .para p {
+        font-size: 1.2rem;
+    }
+}
+
+
 @media (max-width: 768px) {
     .sections {
         flex-direction: column;
-        gap: 50px;
+        gap: 40px;
     }
 
     .left img {
@@ -116,4 +141,26 @@
     .right {
         text-align: center;
     }
+
+    .title h1 {
+        font-size: 2.5rem;
+    }
+
+    
+    .about,
+    .title h1,
+    .sections,
+    .left img,
+    .right {
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .left img {
+        transition: opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s;
+    }
+
+    .right {
+        transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;
+    }
 }
+

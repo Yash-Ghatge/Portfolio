@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import { SiMongodb, SiDjango, SiExpress } from "react-icons/si";
+import { SiMongodb, SiDjango, SiExpress,SiPandas,SiNumpy} from "react-icons/si";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact,faPython,faJs,faHtml5,faCss,faNodeJs,} from "@fortawesome/free-brands-svg-icons";
+import { faReact,faPython,faJs,faNodeJs,} from "@fortawesome/free-brands-svg-icons";
 
 import "./Myskill.css"
 
 const skills = [
     { name: "Python", icon: <FontAwesomeIcon icon={faPython} style={{ color: "#74C0FC", fontSize: "3rem" }} /> },
     { name: "JavaScript", icon: <FontAwesomeIcon icon={faJs} style={{color: "#FFD43B",fontSize: "3rem"}} /> },
-    { name: "HTML", icon: <FontAwesomeIcon icon={faHtml5} style={{color: "#ff4a3d",fontSize: "3rem"}} /> },
-    { name: "CSS", icon: <FontAwesomeIcon icon={faCss} style={{color: "#5fa6dd",fontSize: "3rem"}} /> },
+    { name: "Pandas", icon: <SiPandas style={{color: "#FFD43B",fontSize: "3rem"}}/> },
+    { name: "Numpy", icon:  <SiNumpy style={{ color: "#74C0FC", fontSize: "3rem" }} /> },
     { name: "Node.js", icon: <FontAwesomeIcon icon={faNodeJs} style={{color: "#53ea48",fontSize: "3rem"}} /> },
     { name: "React", icon:<FontAwesomeIcon icon={faReact} style={{ color: "#74C0FC", fontSize: "3rem" }} /> },
     { name: "MongoDB", icon: <SiMongodb style={{ color: "#53ea48", fontSize: "3rem" }}/> },

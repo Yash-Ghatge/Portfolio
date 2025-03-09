@@ -77,7 +77,7 @@
     font-weight: bold;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .skills-container {
         grid-template-columns: repeat(2, 1fr);

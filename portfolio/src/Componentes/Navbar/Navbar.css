@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,5 +93,127 @@
         padding-left: 100px;
         flex-direction: row;
         gap: 20px;
+    }
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+
+.nav-name {
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+
+.nav-mob-close {
+    display: none;
+}
+
+.nav-mob-open {
+    display: none;
+}
+
+/* Tablet Screen (Between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        margin: 20px 50px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+        font-size: 18px;
+    }
+
+    .nav-connect {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile Screen (Below 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 20px 30px;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: relative;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 29px;
+        width: 30px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1F0016;
+        width: 300px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -300px;
+    }
+
+    .nav-menu li {
+        font-size: 24px;
+        padding-left: 50px;
+        flex-direction: row;
+        gap: 15px;
     }
 }

@@ -1,4 +1,3 @@
-
 .hero {
     display: flex;
     align-items: center;
@@ -6,16 +5,20 @@
     gap: 35px;
     padding-top: 50px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
 }
-
 
 .hero h1 {
     width: 70%;
     font-size: 90px;
     font-weight: 600;
     line-height: 1.2;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
 }
-
 
 .hero h1 span {
     background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
@@ -24,13 +27,14 @@
     -webkit-text-fill-color: transparent;
 }
 
-
 .hero p {
     width: 50%;
     font-size: 22px;
     line-height: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.6s forwards;
 }
-
 
 .hero-action {
     display: flex;
@@ -39,15 +43,17 @@
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.9s forwards;
 }
-
 
 .hero-connect {
     padding: 25px 45px;
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s, transform 0.3s ease;
 }
 
 .hero-resume {
@@ -55,7 +61,12 @@
     border-radius: 50px;
     border: 2px solid #FFF;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s, transform 0.3s ease;
+}
+
+.hero-connect:hover,
+.hero-resume:hover {
+    transform: scale(1.05);
 }
 
 .hero-connect:hover {
@@ -66,6 +77,16 @@
     border-color: #b515ff9f;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media (max-width: 1024px) {
     .hero h1 {
@@ -86,7 +107,6 @@
         text-align: center;
     }
 }
-
 
 @media (max-width: 768px) {
     .hero {
@@ -110,8 +130,13 @@
         padding: 18px 40px;
         font-size: 18px;
     }
+    .hero,
+    .hero h1,
+    .hero p,
+    .hero-action {
+        animation-duration: 0.6s;
+    }
 }
-
 
 @media (max-width: 480px) {
     .hero h1 {
