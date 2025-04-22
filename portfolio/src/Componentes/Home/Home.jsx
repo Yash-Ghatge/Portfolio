@@ -2,7 +2,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Home.css'
 const Home = () => {
   const handleDownload = () => {
-    const resumeUrl = "/Yash.docx";
+    const resumeUrl = "/Yash.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.setAttribute("download", "Yash.docx");
